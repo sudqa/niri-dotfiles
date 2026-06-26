@@ -28,7 +28,7 @@ binds {
     }
         
     // === Apps ===
-    Mod+Shift+A hotkey-overlay-title="AI" { spawn "kitty" "opencode"; }
+    Mod+Ctrl+A hotkey-overlay-title="AI" { spawn "kitty" "opencode"; }
     Mod+Shift+Y hotkey-overlay-title="YouTube" { spawn "zen-browser" "https://youtube.com"; }
     Mod+Shift+I hotkey-overlay-title="Instagram" { spawn "zen-browser" "https://www.instagram.com/sudqa/.com"; }
 
@@ -115,18 +115,12 @@ binds {
     // === Column Navigation ===
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { move-column-to-first; }
-    Mod+Ctrl+End  { move-column-to-last; }
 
     // === Workspace Navigation ===
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
     Mod+U              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
-    Mod+Ctrl+Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
 
     // === Workspace Management ===
     //Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" {spawn "dms" "ipc" "call" "workspace-rename" "open";}

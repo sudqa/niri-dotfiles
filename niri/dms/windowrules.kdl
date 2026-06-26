@@ -1,36 +1,33 @@
 // DMS Window Rules - Managed by DankMaterialShell
 // Do not edit manually - changes may be overwritten
 
-// @id=wr_1779806907269077091 @name=org.prismlauncher.PrismLauncher
+// @id=wr_1781684372091893905 @name=Tk
 window-rule {
-    match app-id="^org.prismlauncher.PrismLauncher$"
+    match app-id="^Tk$"
+    open-floating true
 }
 
-// @id=wr_1779806983135390096 @name=Spotify
+// @id=wr_1781713146057883813 @name=Spotify
 window-rule {
     match app-id="^Spotify$"
     open-on-workspace "4"
-    default-column-width { proportion 0.5; }
 }
 
-// @id=wr_1779806995597838559 @name=discord
-window-rule {
-    match app-id="^discord$"
-    open-on-workspace "3"
-    default-column-width { proportion 0.573; }
-}
-
-// @id=wr_1779807031857385627 @name=zen
-window-rule {
-    match app-id="^zen$"
-    open-focused true
-    open-on-workspace "2"
-    default-column-width { proportion 0.8; }
-}
-
-// @id=wr_1780072838521871101 @name=equibop
+// @id=wr_1781713340569828166 @name=equibop
 window-rule {
     match app-id="^equibop$"
     open-on-workspace "3"
-    default-column-width { proportion 0.573; }
+    default-column-width { fixed 640; }
+}
+
+// @id=wr_1781713355012165607 @name=equibop
+window-rule {
+    match app-id="^equibop$"
+    default-column-width { fixed 1000; }
+}
+
+// @id=wr_1782386380210087719 @name=Spotify
+window-rule {
+    match app-id="^Spotify$"
+    open-floating true
 }

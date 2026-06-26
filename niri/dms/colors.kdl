@@ -5,13 +5,13 @@ layout {
     background-color "transparent"
 
     focus-ring {
-        active-color   "#ffffff"
+        active-color   "#ff0000"
         inactive-color "#555555"
         urgent-color   "#dd0000"
     }
 
     border {
-        active-color   "#ffffff"
+        active-color   "#ff0000"
         inactive-color "#555555"
         urgent-color   "#dd0000"
     }
@@ -21,13 +21,13 @@ layout {
     }
 
     tab-indicator {
-        active-color   "#ffffff"
+        active-color   "#ff0000"
         inactive-color "#555555"
         urgent-color   "#dd0000"
     }
 
     insert-hint {
-        color "#ffffff80"
+        color "#ff000080"
     }
 }
 

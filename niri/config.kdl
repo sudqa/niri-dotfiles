@@ -12,11 +12,60 @@ gestures {
         off
     }
 }
+animations {
+    
+    workspace-switch {
+        
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
 
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+
+    exit-confirmation-open-close {
+        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    }
+
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+
+    overview-open-close {
+        spring damping-ratio=1.5 stiffness=1000 epsilon=0.0001
+    }
+
+    recent-windows-close {      
+        spring damping-ratio=1.5 stiffness=800 epsilon=0.001
+    }
+}
 input {
     keyboard {
         xkb {
-            options "altwin:swap_alt_win,caps:" 
+            options "altwin:swap_alt_win,caps:escape" 
             layout "us" // Use the American keyboard layout
         }
         numlock // Enable numlock on startup
@@ -51,12 +100,12 @@ layout {
     border {
         on
         width 1
-        active-color   "#666666" 
-        inactive-color "#303030"
+        active-color   "#ff0000" 
+        inactive-color "#570000"
         urgent-color   "#cc4444"
     }
     shadow {
-        on
+        off
         softness 60
         spread 15
         offset x=0 y=5
@@ -82,11 +131,19 @@ overview {
         off
     }
 }
+
 // Add lines like this to spawn processes at startup.
 spawn-at-startup "systemctl" "--user" "import-environment" "QT_QPA_PLATFORMTHEME" "QT_STYLE_OVERRIDE" "QT_QPA_PLATFORM"
 spawn-at-startup "ydotoold"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "xsettingsd"
+
+spawn-at-startup "kitty" "--title=cava" "--" "cava"
+window-rule {
+    match app-id="kitty" title="cava"
+    open-on-workspace "4"
+    open-floating true
+}
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
@@ -161,7 +218,7 @@ window-rule {
 
 window-rule {
     match app-id="^Spotify$"
-    match app-id="^zen$"
+    //match app-id="^zen$"
     match app-id="^discord$"
     match app-id="^org.quickshell$"
     match app-id="^org.gnome.Nautilus$"
@@ -172,7 +229,10 @@ window-rule {
     match app-id="^org.prismlauncher.PrismLauncher$"
     match app-id="^com.danklinux.dms$"
     match app-id="^equibop$"
-    opacity 0.85
+    match app-id="^org.qbittorrent.qBittorrent$"
+    match app-id="^steam$"
+    match app-id="^python3$"
+    opacity 0.9;
     background-effect{
         blur true
     }
@@ -184,14 +244,8 @@ window-rule {
 window-rule {
     match app-id="^Spotify$"
     open-on-workspace "4"
-    default-column-width { proportion 0.5; }
-}
-
-// @id=wr_1779806995597838559 @name=discord
-window-rule {
-    match app-id="^discord$"
-    open-on-workspace "3"
-    default-column-width { proportion 0.573; }
+    default-column-width { proportion 0.7; }
+    open-floating true
 }
 
 // @id=wr_1779807031857385627 @name=zen
@@ -200,14 +254,29 @@ window-rule {
     open-focused true
     open-on-workspace "2"
     default-column-width { proportion 0.8; }
+    background-effect{
+        blur true
+    }
 }
 
 // @id=wr_1780072838521871101 @name=equibop
 window-rule {
     match app-id="^equibop$"
     open-on-workspace "3"
-    default-column-width { proportion 0.573; }
+    default-column-width { proportion 0.7; }
 }
+
+window-rule {
+    match app-id="^steam$"
+    open-on-workspace "1"
+    default-column-width { proportion 0.7; }
+}
+
+window-rule {
+    match app-id="^org.vinegarhq.Sober$"
+    open-on-workspace "1"
+}
+
 
 
 debug {
@@ -238,4 +307,4 @@ include "dms/alttab.kdl"
 include "dms/binds.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
-include "dms/windowrules.kdl"
+//include "dms/windowrules.kdl"
