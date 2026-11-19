@@ -1,20 +1,15 @@
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3c7cd310-8b8b-432a-ba82-0155267bc924" />
+<img width="1920" height="1080" alt="screenshot_2026-11-19_22-27-22" src="https://github.com/user-attachments/assets/a77ac413-e7d7-470b-80e8-1573236c19a3" />
 
 ## Niri
 
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/42e9999d-91bb-4a77-9aa9-ea257786b5e3" />
-
-## Hyprland
-
-
-# 🖥️ Arch Linux Setup
+# Arch Linux Setup
 
 Personal setup for getting an Arch system up and running — packages, mounts, and essentials.
 
 ---
 
-## 📦 Prerequisites
+## Prerequisites
 
 ### Install `yay` (AUR Helper)
 
@@ -27,7 +22,7 @@ makepkg -si
 
 ---
 
-## 💾 Mounting HDD
+## Mounting HDD
 
 ```bash
 sudo mkdir /mnt/hdd
@@ -36,23 +31,15 @@ sudo mkdir /mnt/hdd
 Add to `/etc/fstab`:
 
 ```
-UUID=4ACAE882CAE86B9F  /mnt/hdd  ntfs-3g  uid=1000,gid=1000,umask=022  0  0
+UUID=4ACAE882CAE86B9F  /mnt/hdd  ntfs-3g  uid=1000,gid=1000,umask=022,nofail  0  0
 ```
 
 ---
 
-## 📥 Packages
+## Packages
 
 ### Official Repos (`pacman`)
 
 ```bash
-sudo pacman -S --noconfirm kitty mpv eog neovim ntfs-3g cava rocm-smi-lib
+sudo pacman -S --noconfirm kitty mpv eog ntfs-3g rocm-smi-lib
 ```
-
-
-### AUR (`yay`)
-
-```bash
-yay -S --noconfirm zen-browser-bin
-```
-
