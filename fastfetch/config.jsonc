@@ -11,7 +11,6 @@
     "logo": {
         "source": "arch_small", // search for logos: fastfetch --list-logos or --print-logos
         "padding": {
-          "left": 2,
 	        "top": 1
 	},
     },

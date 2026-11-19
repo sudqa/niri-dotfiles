@@ -1,33 +1,39 @@
-// DMS Window Rules - Managed by DankMaterialShell
+// DMS Window Rules - Managed by Dux Modular Shell
 // Do not edit manually - changes may be overwritten
 
-// @id=wr_1781684372091893905 @name=Tk
+// @id=wr_1794753794269175169 @name=discord
 window-rule {
-    match app-id="^Tk$"
-    open-floating true
+    match app-id="^discord$"
+    open-on-workspace "3"
 }
 
-// @id=wr_1781713146057883813 @name=Spotify
+// @id=wr_1794756989222244605 @name=librewolf
+window-rule {
+    match app-id="^librewolf$"
+    open-on-workspace "2"
+}
+
+// @id=wr_1794892785309662764 @name=Spotify
 window-rule {
     match app-id="^Spotify$"
     open-on-workspace "4"
 }
 
-// @id=wr_1781713340569828166 @name=equibop
+// @id=dms-floating-windows @name=DMS Floating Windows
 window-rule {
-    match app-id="^equibop$"
-    open-on-workspace "3"
-    default-column-width { fixed 640; }
-}
-
-// @id=wr_1781713355012165607 @name=equibop
-window-rule {
-    match app-id="^equibop$"
-    default-column-width { fixed 1000; }
-}
-
-// @id=wr_1782386380210087719 @name=Spotify
-window-rule {
-    match app-id="^Spotify$"
+    match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
     open-floating true
+}
+
+// @id=wr_1795068933301096407 @name=zen
+window-rule {
+    match app-id="^zen$"
+    open-on-workspace "2"
+    min-width 0
+}
+
+// @id=dms-window-opaque @name=DMS Window Opaque
+window-rule {
+    match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
+    opacity 1.00
 }
