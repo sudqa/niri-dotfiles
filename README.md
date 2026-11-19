@@ -2,7 +2,7 @@
 
 # Arch Linux Setup
 
-### Install `yay`
+### Install `yay` (AUR Helper)
 ```bash
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
