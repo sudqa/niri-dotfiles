@@ -1,5 +1,4 @@
 <img width="1920" height="1080" alt="screenshot_2026-11-19_22-27-22" src="https://github.com/user-attachments/assets/a77ac413-e7d7-470b-80e8-1573236c19a3" />
-## Niri
 
 # Arch Linux Setup
 
