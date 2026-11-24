@@ -38,13 +38,14 @@ layout {
         on
         width 1
         active-color "#616161"
-        inactive-color "#00000000"
+        inactive-color "#61616180"
         urgent-color "#cc4444"
     }
     focus-ring{
         off
     }
     shadow {
+	on
         softness 30
         spread 5
         offset x=0 y=5
@@ -173,12 +174,16 @@ window-rule {
     open-on-workspace "4"
 }
 window-rule {
+    match app-id="^com.obsproject.Studio$"
+    open-on-workspace "4"
+}
+
+/-window-rule {
     opacity 0.8
     background-effect {
         blur true
-        xray false
-        noise 0.02
-        saturation 2.0
+	xray false
+        noise 0.01
     }
 }
 layer-rule {
@@ -190,9 +195,15 @@ layer-rule {
     background-effect {
         blur true
         xray false
-        noise 0.02
-        saturation 2.0
-    }  
+        noise 0.01
+    } 
+    shadow {
+	on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
  }
 workspace "1"
 workspace "2"

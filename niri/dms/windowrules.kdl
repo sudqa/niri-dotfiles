@@ -19,17 +19,46 @@ window-rule {
     open-on-workspace "4"
 }
 
-// @id=dms-floating-windows @name=DMS Floating Windows
-window-rule {
-    match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
-    open-floating true
-}
-
 // @id=wr_1795068933301096407 @name=zen
 window-rule {
     match app-id="^zen$"
     open-on-workspace "2"
     min-width 0
+}
+
+// @id=wr_1795200426848851229 @name=dev.duxlabs.files
+window-rule {
+    match app-id="^dev.duxlabs.files$"
+    open-floating true
+}
+
+// @id=wr_1795202207529363342 @name=org.gnome.Nautilus
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    open-floating true
+}
+
+// @id=wr_1795202308902445162 @name=org.gnome.Nautilus
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    open-floating true
+}
+
+// @id=wr_1795332730351865540 @name=org.prismlauncher.PrismLauncher
+window-rule {
+    match app-id="^org.prismlauncher.PrismLauncher$" is-floating=true
+}
+
+// @id=wr_1795332739052468048 @name=org.prismlauncher.PrismLauncher
+window-rule {
+    match app-id="^org.prismlauncher.PrismLauncher$"
+    open-floating true
+}
+
+// @id=dms-floating-windows @name=DMS Floating Windows
+window-rule {
+    match app-id="^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$"
+    open-floating true
 }
 
 // @id=dms-window-opaque @name=DMS Window Opaque
