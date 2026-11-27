@@ -17,12 +17,12 @@ sudo vim /etc/fstab
 ```
 Add to `/etc/fstab`:
 ```
-UUID=4ACAE882CAE86B9F  /mnt/hdd  ntfs-3g  uid=1000,gid=1000,umask=022,nofail  0  0
+UUID=???  /mnt/hdd  ntfs-3g  uid=1000,gid=1000,umask=022,nofail  0  0
 ```
 ---
 ### Essential Packages
 ```bash
-sudo pacman -S --noconfirm kitty mpv eog ntfs-3g rocm-smi-lib xdg-desktop-portal-gnome 
+sudo pacman -S --noconfirm kitty fuzzel mpv eog ntfs-3g rocm-smi-lib xdg-desktop-portal xdg-desktop-portal-wlr 
 ```
 
 ### Essential Themes and Fonts
