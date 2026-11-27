@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/33e062df-0ef5-4445-acce-7590d82b78ce
+
 # Arch Linux Setup
 
 ### Install `yay` (AUR Helper)
