@@ -15,7 +15,7 @@ makepkg -si
 sudo mkdir /mnt/hdd
 sudo vim /etc/fstab
 ```
-Add to `/etc/fstab`: (change ur drive's UUID)
+Add to `/etc/fstab` (change ur drive's UUID)
 ```
 UUID=???  /mnt/hdd  ntfs-3g  uid=1000,gid=1000,umask=022,nofail  0  0
 ```
